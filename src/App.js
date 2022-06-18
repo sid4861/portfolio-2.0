@@ -17,7 +17,7 @@ function Header() {
   return (
     <div className='p-8 flex flex-col md:flex-row items-center justify-around ' >
       <div  >
-        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-5xl'>Hi, I am Siddharth</h1>
+        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-5xl'>Siddharth</h1>
         {/* tags */}
         <div className='grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 ' >
           <div className='w-80 p-2 font-moche bg-[#FF60B1] hover:bg-[#FBAC00] text-center text-[#FBAC00] hover:text-[#FF60B1] font-bold ' >
