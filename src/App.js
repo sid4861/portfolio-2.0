@@ -6,28 +6,25 @@ import locomotiveScroll from "locomotive-scroll";
 
 function App() {
   return (
-    <div className='min-h-screen bg-[#011D2D] ' >
+    <div className='min-h-screen bg-[#00131E] ' >
       <ContactFab />
       <Header />
       <SocialLinks />
       <Projects />
-      <Photos />
+      {/* <Photos /> */}
     </div>
   );
 }
 
 function Header() {
-
-
-
   return (
-    <div className='p-8 flex flex-col md:flex-row items-center justify-around ' >
+    <div className=' p-4 md:p-12 flex flex-col md:flex-row items-center justify-around ' >
       <div  >
-        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-5xl'>Siddharth</h1>
+        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-7xl'>Siddharth</h1>
         {/* tags */}
         <div
 
-          className='grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 '
+          className='grid gap-2 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 '
         >
           <div className='w-80 p-2 font-moche bg-[#FF60B1] hover:bg-[#FBAC00] text-center text-[#FBAC00] hover:text-[#FF60B1] font-bold ' >
             <p className=' text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)]' >Full stack development</p>
@@ -67,21 +64,21 @@ function ContactFab() {
 
 function SocialLinks() {
   return (
-    <div className='flex flex-col items-center md:flex-row  border-y-4 border-[#FDEAA6] font-moche' >
+    <div className='mt-28 flex flex-col items-center md:flex-row  border-y-4 border-[#FDEAA6] font-moche bg-black' >
       <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
-        <p className='text-[#FDEAA6] text-2xl  ' >Twitter</p>
+        <p className='text-[#FDEAA6] text-xl  ' >Twitter</p>
       </div>
       <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
-        <p className='text-[#FDEAA6] text-2xl  ' >Linkedin</p>
+        <p className='text-[#FDEAA6] text-xl  ' >Linkedin</p>
       </div>
       <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
-        <p className='text-[#FDEAA6] text-2xl  ' >siddharth0x.eth</p>
+        <p className='text-[#FDEAA6] text-xl  ' >siddharth0x.eth</p>
       </div>
       <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
-        <p className='text-[#FDEAA6] text-2xl  ' >Dribbble</p>
+        <p className='text-[#FDEAA6] text-xl  ' >Dribbble</p>
       </div>
       <div className=' p-4 text-center w-full ' >
-        <p className='text-[#FDEAA6] text-2xl  ' >Github</p>
+        <p className='text-[#FDEAA6] text-xl  ' >Github</p>
       </div>
     </div>
   );
@@ -89,9 +86,11 @@ function SocialLinks() {
 
 function Projects() {
   return (
-    <div className='mt-24 p-6 md:p-16' >
-      <div className="m-auto bg-[url('./assets/projects.svg')] bg-no-repeat bg-contain w-[200px] h-[200px]" >
-        <p className='font-moche text-[#2EE8B0] font-bold text-xl relative top-6 left-14 drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] ' >Projects</p>
+    <div className='mt-20 p-6 md:p-16' >
+      <div className="m-auto bg-[url('./assets/projects.svg')] bg-no-repeat bg-contain w-[70vw] h-[20vh] md:w-[500px] md:h-[300px]" >
+        <div className='font-moche text-[#2EE8B0] font-bold text-3xl md:text-6xl relative top-8 left-16 md:top-16 md:left-24 drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] w-max' >
+          Projects
+        </div>
       </div>
       <div className='grid gap-16 grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-2 ' >
         <div className="
