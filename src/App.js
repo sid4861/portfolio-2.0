@@ -1,6 +1,8 @@
+import React, { useEffect, useState } from 'react';
 import './App.css';
 import HeaderImage from "./assets/header-image.png";
 import { MailIcon, CalendarIcon } from '@heroicons/react/solid'
+import locomotiveScroll from "locomotive-scroll";
 
 function App() {
   return (
@@ -9,17 +11,24 @@ function App() {
       <Header />
       <SocialLinks />
       <Projects />
+      <Photos />
     </div>
   );
 }
 
 function Header() {
+
+
+
   return (
     <div className='p-8 flex flex-col md:flex-row items-center justify-around ' >
       <div  >
         <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-5xl'>Siddharth</h1>
         {/* tags */}
-        <div className='grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 ' >
+        <div
+
+          className='grid gap-4 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 '
+        >
           <div className='w-80 p-2 font-moche bg-[#FF60B1] hover:bg-[#FBAC00] text-center text-[#FBAC00] hover:text-[#FF60B1] font-bold ' >
             <p className=' text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)]' >Full stack development</p>
           </div>
@@ -80,7 +89,7 @@ function SocialLinks() {
 
 function Projects() {
   return (
-    <div className='mt-32 p-6 md:p-16' >
+    <div className='mt-24 p-6 md:p-16' >
       <div className="m-auto bg-[url('./assets/projects.svg')] bg-no-repeat bg-contain w-[200px] h-[200px]" >
         <p className='font-moche text-[#2EE8B0] font-bold text-xl relative top-6 left-14 drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] ' >Projects</p>
       </div>
@@ -344,5 +353,50 @@ function Projects() {
     </div>
 
   );
+}
+
+function Photos() {
+  const scrollRef = React.createRef();
+  const [scrollY, setScrollY] = useState(0);
+
+  useEffect(() => {
+    const scroll = new locomotiveScroll({
+      el: scrollRef.current,
+      smooth: true,
+      lerp: 0.13,
+      smartphone: { smooth: true },
+      tablet: { smooth: true }
+    });
+    scroll.on('scroll', obj => {
+      setScrollY(obj.scroll.y);
+    });
+  });
+
+  return (
+    <div className='mt-24 p-6 md:p-16' >
+      <div className="m-auto bg-[url('./assets/projects.svg')] bg-no-repeat bg-contain w-[200px] h-[200px]" >
+        <p className='font-moche text-[#2EE8B0] font-bold text-xl relative top-6 left-14 drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] ' >
+          Stills
+        </p>
+      </div>
+      {/* class columns */}
+      <div className='w-[100%] relative flex justify-center' data-scroll-container ref={scrollRef} >
+        {/* 1st col  column-wrap column-wrap--height*/}
+        <div className='relative z-[1] flex p-16 h-[100vh] flex-col-reverse' >
+          {/* class column */}
+          <div className={`relative will-change-transform flex flex-col-reverse translate-y-[${scrollY}]`} >
+            <figure className='z-[1] relative' >
+              {/* img wrap */}
+              <div data-pos="2" className='w-[190px] h-[220px] relative rounded-lg overflow-hidden'>
+                {/* img */}
+                <div className="w-[100%] h-[100%] bg-cover bg-[url('https://images.unsplash.com/photo-1534528741775-53994a69daeb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2864&q=80.jpg')]" >
+                </div>
+              </div>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
 }
 export default App;
