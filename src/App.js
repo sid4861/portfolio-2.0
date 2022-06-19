@@ -113,7 +113,7 @@ function Projects() {
         hover:after:-translate-y-6
         ">
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className='w-[100%] h-[40%] bg-red-100' ></div>
+            <div className="w-[100%] h-[40%] bg-[url('./assets/wagmi-postcards-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -159,7 +159,7 @@ function Projects() {
         mt-8
         ">
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className='w-[100%] h-[40%] bg-red-100' ></div>
+            <div className="w-[100%] h-[40%] bg-[url('./assets/crypto-school-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -200,7 +200,7 @@ function Projects() {
         hover:after:-translate-y-6
         ">
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className='w-[100%] h-[40%] bg-red-100' ></div>
+            <div className="w-[100%] h-[40%] bg-[url('./assets/instaclinik-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -241,7 +241,7 @@ function Projects() {
         hover:after:-translate-y-6
         ">
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className='w-[100%] h-[40%] bg-red-100' ></div>
+            <div className="w-[100%] h-[40%] bg-[url('./assets/wisheslink-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
