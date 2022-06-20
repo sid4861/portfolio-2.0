@@ -215,7 +215,7 @@ function Projects() {
 
               <div className='mt-8' >
                 <p className='text-[16px] font-sora text-[#011D2D] ' >
-                  A sass tool to help doctors and health influecers convert their social Media DMs and following into appointments. Working on this in my full time job.
+                  A sass tool to help doctors and health influencers convert their social Media DMs and following into appointments. Working on this in my full time job.
                 </p>
               </div>
             </div>
