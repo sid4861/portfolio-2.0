@@ -3,6 +3,12 @@ import './App.css';
 import HeaderImage from "./assets/header-image.png";
 import { MailIcon, CalendarIcon } from '@heroicons/react/solid'
 import locomotiveScroll from "locomotive-scroll";
+import WagmiPostcardGraphic from "./assets/wagmi-postcards-graphic.svg";
+import CryptoSchoolGraphic from "./assets/crypto-school-graphic.svg";
+import InstaclinikGraphic from "./assets/instaclinik-graphic.svg";
+import WisheslinkGraphic from "./assets/wisheslink-graphic.svg";
+import PaintupGraphic from "./assets/paintup-graphic.svg";
+import AmeebaGraphic from "./assets/ameeba-graphic.svg";
 
 function App() {
   return (
@@ -50,11 +56,11 @@ function Header() {
 function ContactFab() {
   return (
     <div className=" z-[3] w-24 bg-[url('./assets/contact.svg')] bg-no-repeat bg-contain h-24 font-sora fixed bottom-2 right-6 md:right-12 md:bottom-12 flex items-start justify-center flex-col" >
-      <div className='flex space-between  items-center text-xs text-white font-bold mb-2 cursor-pointer	' >
+      {/* <div className='flex space-between  items-center text-xs text-white font-bold mb-2 cursor-pointer	' >
         <MailIcon className="h-5 w-5 text-white mx-1" />
         <p>Email</p>
-      </div>
-      <div className='flex space-around text-xs items-center text-white font-bold mb-4 cursor-pointer	' >
+      </div> */}
+      <div className='flex space-around text-xs items-center text-white font-bold mb-4 cursor-pointer	' onClick={() => window.open("https://calendly.com/siddharthlodha/15min", "_blank")} >
         <CalendarIcon className="h-5 w-5 text-white mx-1" />
         <p>Calendly</p>
       </div>
@@ -65,19 +71,19 @@ function ContactFab() {
 function SocialLinks() {
   return (
     <div className='mt-28 flex flex-col items-center md:flex-row  border-y-4 border-[#FDEAA6] font-moche bg-black' >
-      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
-        <p className='text-[#FDEAA6] text-xl  ' >Twitter</p>
+      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0 cursor-pointer' onClick={() => window.open("https://twitter.com/siddharth0x", "_blank")} >
+        <p className='text-[#FDEAA6] text-xl ' >Twitter</p>
       </div>
-      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
+      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0 cursor-pointer' onClick={() => window.open("https://www.linkedin.com/in/siddharth-lodha-693418105/", "_blank")} >
         <p className='text-[#FDEAA6] text-xl  ' >Linkedin</p>
       </div>
       <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
         <p className='text-[#FDEAA6] text-xl  ' >siddharth0x.eth</p>
       </div>
-      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0' >
+      <div className=' p-4 text-center w-full border-b-4 border-[#FDEAA6] md:border-r-4 md:border-b-0 cursor-pointer' onClick={() => window.open("https://dribbble.com/sid4861", "_blank")} >
         <p className='text-[#FDEAA6] text-xl  ' >Dribbble</p>
       </div>
-      <div className=' p-4 text-center w-full ' >
+      <div className=' p-4 text-center w-full cursor-pointer ' onClick={() => window.open("https://github.com/sid4861", "_blank")} >
         <p className='text-[#FDEAA6] text-xl  ' >Github</p>
       </div>
     </div>
@@ -111,9 +117,14 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://wagmipostcards.netlify.app/", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/wagmi-postcards-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={WagmiPostcardGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -157,9 +168,14 @@ function Projects() {
         hover:after:-translate-x-6
         hover:after:-translate-y-6
         mt-8
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://medium.com/@Siddharthux/crypto-school-a-master-class-2c007616baf3", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/crypto-school-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={CryptoSchoolGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -198,9 +214,14 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://app.instaclinik.com/", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/instaclinik-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={InstaclinikGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -239,9 +260,14 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://www.wisheslink.in/", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/wisheslink-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={WisheslinkGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -284,9 +310,14 @@ function Projects() {
         hover:after:-translate-x-6
         hover:after:-translate-y-6
         mt-8
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://www.figma.com/proto/FKzeJh9ufVGwgQuNzpPzTk/event-landing-page?node-id=156%3A8&scaling=min-zoom&page-id=90%3A2", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/paintup-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={PaintupGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
@@ -325,9 +356,14 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        ">
+        cursor-pointer
+        "
+          onClick={() => window.open("https://www.figma.com/proto/1b14ASt0Kw0hyAJ5lv08Ac/ameeba-landing-page?node-id=0%3A3&scaling=min-zoom&page-id=0%3A1&starting-point-node-id=0%3A3", "_blank")}
+        >
           <div className="z-[1] transition transform delay-150 relative p-4 bg-[#F8F3EC] w-[342px] h-[506px] md:w-[389px] md:h-[506px] ">
-            <div className="w-[100%] h-[40%] bg-[url('./assets/ameeba-graphic.svg')] bg-no-repeat bg-cover bg-center" ></div>
+            <div className="w-[100%] h-[40%] overflow-hidden" >
+              <img src={AmeebaGraphic} className="w-[100%] transition-transform hover:scale-150" />
+            </div>
             <div className='mt-2 p-8' >
               <div>
                 <h3 className='font-moche text-lg font-semibold text-[#0D1215]' >
