@@ -103,13 +103,13 @@ function SocialLinks() {
 
 function Projects() {
   return (
-    <div className='mt-20 p-6 md:p-16' >
+    <div className='mt-20 p-6 md:p-4 lg:p-16' >
       <div className="m-auto bg-[url('./assets/projects.svg')] bg-no-repeat bg-contain w-[70vw] h-[20vh] md:w-[500px] md:h-[300px]" >
         <div className='font-moche text-[#2EE8B0] font-bold text-3xl md:text-6xl relative top-8 left-16 md:top-16 md:left-24 drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] w-max' >
           Projects
         </div>
       </div>
-      <div className='grid gap-16 grid-cols-1 grid-rows-1 md:grid-cols-3 md:grid-rows-2 ' >
+      <div className='grid gap-4 grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 ' >
         <div className="
         w-[342px] h-[506px]
         md:w-[389px] md:h-[506px]
