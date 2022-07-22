@@ -109,7 +109,7 @@ function Projects() {
           Projects
         </div>
       </div>
-      <div className='grid gap-4 grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 ' >
+      <div className='grid gap-4 gap-y-8 grid-cols-1 grid-rows-1 md:grid-cols-2 md:grid-rows-3 lg:grid-cols-3 lg:grid-rows-2 ' >
         <div className="
         w-[342px] h-[506px]
         md:w-[389px] md:h-[506px]
@@ -178,7 +178,6 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        mt-8
         cursor-pointer
         "
           onClick={() => window.open("https://medium.com/@Siddharthux/crypto-school-a-master-class-2c007616baf3", "_blank")}
@@ -320,7 +319,6 @@ function Projects() {
         hover:before:-translate-y-3
         hover:after:-translate-x-6
         hover:after:-translate-y-6
-        mt-8
         cursor-pointer
         "
           onClick={() => window.open("https://www.figma.com/proto/FKzeJh9ufVGwgQuNzpPzTk/event-landing-page?node-id=156%3A8&scaling=min-zoom&page-id=90%3A2", "_blank")}
