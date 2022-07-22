@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
 import HeaderImage from "./assets/header-image.png";
+import HeaderImage2 from "./assets/header-image-2.jpg";
 import { MailIcon, CalendarIcon } from '@heroicons/react/solid'
 import locomotiveScroll from "locomotive-scroll";
 import WagmiPostcardGraphic from "./assets/wagmi-postcards-graphic.svg";
@@ -25,29 +26,39 @@ function App() {
 function Header() {
   return (
     <div className=' p-4 md:p-12 flex flex-col md:flex-row items-center justify-around ' >
-      <div  >
-        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-7xl'>Siddharth</h1>
+      <div className='md:w-2/4' >
+        <h1 className='font-moche text-[#FDEAA6] text-3xl md:text-7xl'>Hi, I'm Siddharth</h1>
+        <p className='text-[#FDEAA6] mt-4' >Code, design, and photography</p>
+        <p className='text-[#FDEAA6] mt-4' >
+          I am a product oriented
+          <span className='text-[#FBAC00] font-moche' > frontend developer </span>
+          and {'\u00A0'}
+          <span className='text-[#FF60B1] font-moche' >UI designer.</span>
+        </p>
+        <p className='text-[#FDEAA6] mt-4' >
+          I am passionate about technology, web3, design and building digital products.
+          I read and pursue photography too.
+        </p>
         {/* tags */}
-        <div
-
+        {/* <div
           className='grid gap-2 grid-cols-1 grid-rows-4 md:grid-cols-2 md:grid-rows-2 mt-8 '
         >
-          <div className='w-80 p-2 font-moche bg-[#FF60B1] hover:bg-[#FBAC00] text-center text-[#FBAC00] hover:text-[#FF60B1] font-bold ' >
-            <p className=' text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)]' >Full stack development</p>
-          </div>
-          <div className='w-80 p-2 font-moche bg-[#FFF05F] hover:bg-[#00E6C1] text-center text-[#00E6C1] hover:text-[#FFF05F] font-bold ' >
-            <p className=' text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)]' >UI design</p>
-          </div>
-          <div className='w-80 p-2 font-moche bg-[#60FF90] hover:bg-[#4601F3] text-center text-[#4601F3] hover:text-[#60FF90] font-bold ' >
-            <p className='text-lg drop-shadow-[0.5px_1.5px_0px_rgba(13,18,21,1)]' >Photography</p>
-          </div>
-          <div className='w-80 p-2 font-moche bg-[#7660FF] hover:bg-[#FBC400] text-center text-[#FBC400] hover:text-[#7660FF] font-bold ' >
-            <p className='text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)]' >Solidity</p>
-          </div>
-        </div>
+          <p className=' text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] w-80 font-moche text-center text-[#FBAC00] hover:text-[#FF60B1] font-bold' >
+            Full stack development
+          </p>
+          <p className='text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] w-80 font-moche text-center text-[#00E6C1] hover:text-[#FFF05F] font-bold'>
+            UI design
+          </p>
+          <p className='text-lg drop-shadow-[0.5px_1.5px_0px_rgba(13,18,21,1)] w-80 font-moche text-center text-[#60FF90] hover:text-[#4601F3] font-bold'>
+            Photography
+          </p>
+          <p className='text-lg drop-shadow-[2px_2px_0px_rgba(13,18,21,1)] w-80  font-moche text-center text-[#7660FF] hover:text-[#FBC400] font-bold '>
+            Solidity
+          </p>
+        </div> */}
       </div>
       <div>
-        <img src={HeaderImage} className="w-[320px] h-[360px]" />
+        <img src={HeaderImage2} className="w-[320px] h-[320px] rounded-full object-cover mt-4 " />
       </div>
     </div>
   );
